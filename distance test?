@@ -1,7 +1,8 @@
-distance = brick.UltasonicDist(2);
-while (distance <=20);
+distance = brick.UltasonicDist(1);
 brick.MoveMotor('A',-40);
-if (distance >= 20);
-brick.StopMotor('B', 'Brake')
+while (distance <= 20)
+brick.MoveMotor('A',-40);
+if (distance >= 20)
+    brick.StopMotor('A', Brake);
 end
 end
