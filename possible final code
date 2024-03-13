@@ -8,12 +8,12 @@ while 1
 
     if (dist > 20)
         pause(1.5);
-        brick.StopMotor('X', 'Cruise');
+        brick.StopMotor('X', 'Coast');
         brick.MoveMotor('Y',30);
-        brick.MoveMotor('X',40, 90,'Brake');
-        brick.MoveMotor('Y', 10);
+        brick.MoveMotor('X',40, 90,'Coast');
+        brick.MoveMotor('Y', -10);
         pause(1);
-        brick.StopMotor('Y','Brake');
+        brick.StopMotor('Y','Coast');
     end
 
     if color 
