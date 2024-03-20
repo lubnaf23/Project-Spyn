@@ -1,20 +1,18 @@
-brick.SetColorMode(X,2);
+while 1 
+ dist = brick.UltrasonicDist(1);
+    color = brick.ColorCode(2);
+    press = brick.TouchPressed(3);
+    brick.MoveMotor('A',40); %forward
+    brick.MoveMotor('B',40);
 
-while 1
-    dist = brick.UltrasonicDist(X);
-    color = brick.ColorCode(X);
-    press = brick.TouchPressed(X);
-    brick.MoveMotor('X',40);
+if (dist > 20)
+brick.MoveMotor('B', 40); % turn
+brick.MoveMotor('D', 50);
 
-    if (dist > 20)
-        pause(1.5);
-        brick.StopMotor('X', 'Coast');
-        brick.MoveMotor('Y',30);
-        brick.MoveMotor('X',40, 90,'Coast');
-        brick.MoveMotor('Y', -10);
-        pause(1);
-        brick.StopMotor('Y','Coast');
-    end
 
-    if color 
-
+if (dist < 10)
+brick.MoveMotor('B', 50);
+brick.MoveMotor('D',40);
+end
+end
+end
