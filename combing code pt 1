@@ -33,6 +33,18 @@ if brick.touchPressed(3)
     brick.MoveMotor('B', 30)
     brick.MoveMotor('C', -10)
     pause(3.5)
+if (color == 5) 
+    brick.StopMotor('B');
+    brick.StopMotor('D');
+    pause(1.0);
+
+if (color == 2)
+    brick.beep(2);
+end
+
+if (color == 3)
+    brick.beep(3);
+
    end
 end
 
