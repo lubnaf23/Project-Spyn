@@ -1,5 +1,6 @@
 while 1
     dist = brick.UltrasonicDist(4); % change according to ports
+    color = brick.SetColorMode(3, 2);
     disp(dist);
 
     % Keep moving forward by default
@@ -11,7 +12,7 @@ while 1
     tooCloseDist = 13; % Adjust
 
     % check for no wall on left
-    if ((dist > noWallDist) && (dist < 30)
+    if ((dist > noWallDist) && (dist < 30))
         disp("turn into wall");
         % reducing left motor speed
         brick.MoveMotor('B', 20);
@@ -52,13 +53,15 @@ if (color == 5)
 end
 
 if (color == 2)
-    brick.beep(2);
+    brick.playTone(100,300,500);
+    brick.playTone(100,300,500);
 end
 
 if (color == 3)
-    brick.beep(3);
+    brick.playTone(100,300,500);
+    brick.playTone(100,300,500);
+    brick.playTone(100,300,500);
 
   
 end
 end
-
