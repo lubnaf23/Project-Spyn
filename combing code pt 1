@@ -11,12 +11,22 @@ while 1
     tooCloseDist = 13; % Adjust
 
     % check for no wall on left
-    if (dist > noWallDist)
+    if ((dist > noWallDist) && (dist < 30)
         disp("turn into wall");
         % reducing left motor speed
         brick.MoveMotor('B', 20);
         brick.MoveMotor('C', 30);
         pause(1); % Adjust pause
+    end
+if (dist > 30)
+pause(1.5)
+ brick.MoveMotor('B', -30)
+    brick.MoveMotor('C', -30)
+    pause(2)
+    brick.MoveMotor('C', 30)
+    brick.MoveMotor('B', -10)
+    pause(3.5)
+end
 
     % Check if too close to a wall
     if (dist < tooCloseDist)
@@ -25,6 +35,7 @@ while 1
         brick.MoveMotor('B', 30);
         brick.MoveMotor('C', 20);
         pause(1); % Adjust
+    end
 
 if brick.touchPressed(3)
     brick.MoveMotor('B', -30)
@@ -33,10 +44,12 @@ if brick.touchPressed(3)
     brick.MoveMotor('B', 30)
     brick.MoveMotor('C', -10)
     pause(3.5)
+end
 if (color == 5) 
     brick.StopMotor('B');
     brick.StopMotor('D');
     pause(1.0);
+end
 
 if (color == 2)
     brick.beep(2);
@@ -45,6 +58,7 @@ end
 if (color == 3)
     brick.beep(3);
 
-   end
+  
+end
 end
 
