@@ -1,3 +1,6 @@
+while 1
+brick.MoveMotor('B', 30)
+brick.moveMotor('D', 30)
 if brick.touchPressed(3)
     brick.MoveMotor('B', -30)
     brick.MoveMotor('D', -30)
@@ -5,4 +8,7 @@ if brick.touchPressed(3)
     brick.MoveMotor('B', 30)
     brick.MoveMotor('D', -10)
     pause(3)
-    
+   end
+end
+
+
