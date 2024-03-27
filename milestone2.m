@@ -10,11 +10,14 @@ if (color == 5)
 end
 
 if (color == 2)
-    brick.beep(2);
+    brick.playTone(100,300,500);
+    brick.playTone(100,300,500);
 end
 
 if (color == 3)
-    brick.beep(3);
+    brick.playTone(100,300,500);
+    brick.playTone(100,300,500);
+    brick.playTone(100,300,500);
 end
 end
 
