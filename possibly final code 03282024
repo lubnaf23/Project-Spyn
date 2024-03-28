@@ -48,12 +48,15 @@ if brick.touchPressed(3)
     pause(3.5)
 end
 if (color == 5) 
+pause(0.3)
     brick.StopMotor('B');
-    brick.StopMotor('D');
+    brick.StopMotor('C');
     pause(1.0);
 end
 
 if (color == 2)
+brick.StopMotor('B');
+brick.StopMotor('C');
     global key
 InitKeyboard();
 
@@ -105,6 +108,8 @@ CloseKeyboard();
 end
 
 if (color == 3)
+brick.StopMotor('B');
+brick.StopMotor('C');
     global key
 InitKeyboard();
 
