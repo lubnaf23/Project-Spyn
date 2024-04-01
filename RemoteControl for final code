@@ -3,7 +3,7 @@ InitKeyboard();
 
 while 1
     pause(0.1);
-    brick.StopMotor('A', 'Break')
+    brick.StopMotor('A', 'Brake')
     brick.StopMotor('B')
     brick.StopMotor('C')
     switch key
