@@ -1,3 +1,4 @@
+global key
 brick.SetColorMode(3, 2);
 
 while 1
@@ -60,7 +61,7 @@ while 1
     if ((color == 2) || (color ==3))
         brick.StopMotor('B');
         brick.StopMotor('C');
-        global key
+    
         InitKeyboard();
 
         while 1
