@@ -1,0 +1,112 @@
+if ((color == 2) && (number ==0))
+        number = 1;
+        brick.StopMotor('B');
+        brick.StopMotor('C');
+    
+        InitKeyboard();
+
+        while 1
+            pause(0.1);
+            brick.StopMotor('A', 'Break')
+            brick.StopMotor('B')
+            brick.StopMotor('C')
+            switch key
+                case 'uparrow'
+                    brick.MoveMotor('B',30)
+                    brick.MoveMotor('C',30);
+
+
+                case 'downarrow'
+                    brick.MoveMotor('B',-30)
+                    brick.MoveMotor('C', -30);
+
+                case 'leftarrow'
+                    brick.MoveMotor('B',30)
+                    brick.MoveMotor('C', -10);
+
+                case 'rightarrow'
+                    brick.MoveMotor('C',30)
+                    brick.Movemotor('B', -10);
+
+                 case 'd'
+                    brick.MoveMotor('A',20)
+                    pause(2)
+
+                case 'u'
+                    brick.MoveMotor('A',-20)
+                    pause(2)
+
+                case 0
+                    brick.StopMotor('A')
+                    brick.StopMotor('B')
+                    brick.StopMotor('C')
+
+                case 'q'
+                    brick.StopMotor('A');
+                    brick.StopMotor('B');
+                    brick.StopMotor('C');
+                    break;
+
+            end
+        end
+        CloseKeyboard();
+    end
+    if ((color == 3) && (number ==1))
+        number = 2;
+        brick.StopMotor('B');
+        brick.StopMotor('C');
+    
+        InitKeyboard();
+
+        while 1
+            pause(0.1);
+            brick.StopMotor('A', 'Break')
+            brick.StopMotor('B')
+            brick.StopMotor('C')
+            switch key
+                case 'uparrow'
+                    brick.MoveMotor('B',30)
+                    brick.MoveMotor('C',30);
+
+
+                case 'downarrow'
+                    brick.MoveMotor('B',-30)
+                    brick.MoveMotor('C', -30);
+
+                case 'leftarrow'
+                    brick.MoveMotor('B',30)
+                    brick.MoveMotor('C', -10);
+
+                case 'rightarrow'
+                    brick.MoveMotor('C',30)
+                    brick.Movemotor('B', -10);
+
+                 case 'd'
+                    brick.MoveMotor('A',20)
+                    pause(2)
+
+                case 'u'
+                    brick.MoveMotor('A',-20)
+                    pause(2)
+
+                case 0
+                    brick.StopMotor('A')
+                    brick.StopMotor('B')
+                    brick.StopMotor('C')
+
+                case 'q'
+                    brick.StopMotor('A');
+                    brick.StopMotor('B');
+                    brick.StopMotor('C');
+                    break;
+
+            end
+        end
+        CloseKeyboard();
+    end
+    if ((color == 4) && (number ==2))
+        
+        brick.StopMotor('B');
+        brick.StopMotor('C');
+    end
+    end
